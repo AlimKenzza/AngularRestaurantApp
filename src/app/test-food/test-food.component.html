@@ -1,0 +1,56 @@
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+
+<div class="row">
+  <div class="col-md-4" *ngFor="let food of foodsList">
+    <app-item-order [foodItem]="food"></app-item-order>
+  </div>
+</div>
+<hr>
+<br>
+<br>
+
+<!-- 
+<div class="card-deck">
+<div class="content">
+    <div class="container">
+      <div class="row" *ngFor="let food of foods | async">
+        <div class="card">
+          <img class="card-img-top" src="{{food.imageURL}}" >
+          <div class="card-body">
+            <h5 class="card-title">Блюдо: {{food.foodName}}</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+  <!-- <div class="blogpost">
+    <h3>{{food.foodName}}</h3>
+    <div>
+      <i class="fas fa-user"></i> Author: <p>{{post.username}}</p>
+      <h3>{{food.price}}</h3>
+    </div>
+    <p [innerHTML]="post.content"></p>
+    <div>
+        <h3>{{food.quantity}}</h3>
+        <img src="{{food.imageURL}}">
+      <a type="button" href="/post/{{post.id}}" class="read-more btn btn-default">Read More</a>
+    </div>
+    <hr>
+  </div>
+  <hr> -->

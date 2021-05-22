@@ -1,0 +1,42 @@
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+
+    <div class="container" *ngFor="let restaurant of restaurants | async">
+      <div class="row">
+        <div class="card" style="width:330px">
+          <img class="card-img-top" src="{{restaurant.imageUrl}}" alt="Card image">
+          <div class="card-body">
+            <h4 class="card-title">Имя заведения {{restaurant.restaurantName}}</h4>
+            <p class="card-text">Адрес {{restaurant.location}}</p>
+            <button class="btn btn-primary" (click)="goToFood(restaurant.restaurantId)">Посмотреть меню</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <br>
+
+
+
+
+  <!-- <div class="blogpost">
+    <h3>{{restaurant.restaurantName}}</h3>
+    <div>
+      <i class="fas fa-user"></i> Author: <p>{{post.username}}</p>
+      <h3>Location {{restaurant.location}}</h3>
+    </div>
+    <p [innerHTML]="post.content"></p>
+    <div>
+        <img src="{{restaurant.imageUrl}}">
+      <a type="button" href="/post/{{post.id}}" class="read-more btn btn-default">Read More</a>
+    </div>
+    <hr>
+  </div>
+  <hr> -->
