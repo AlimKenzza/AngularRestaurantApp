@@ -5,6 +5,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { TestFoodComponent } from './test-food/test-food.component';
 import { TestRestaurantComponent } from './test-restaurant/test-restaurant.component';
+import { CartItemComponent } from './cart-item/cart-item.component';
 
 
 
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   // { path: 'food', component: TestFoodComponent},
   { path: 'food/:id', component: TestFoodComponent },
-  { path: 'restaurant', component: TestRestaurantComponent}
+  { path: 'restaurant', component: TestRestaurantComponent},
+  { path: 'cart', component: CartItemComponent }
 ];
 
 @NgModule({

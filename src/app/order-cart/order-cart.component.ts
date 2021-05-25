@@ -15,13 +15,13 @@ export class OrderCartComponent implements OnInit {
   constructor(private msg: MessengerService) { }
 
   ngOnInit() {
-    this.msg.getMsg().subscribe((food: FoodPayload) => {
-      this.cartItems.push({
-        foodName: food.foodName,
-        qty: 1,
-        price: food.price
-      })
-    })
+  //   this.msg.getMsg().subscribe((food: FoodPayload) => {
+  //     this.cartItems.push({
+  //       foodName: food.foodName,
+  //       qty: 1,
+  //       price: food.price
+  //     })
+  //   })
   }
 
 }

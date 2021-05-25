@@ -1,5 +1,121 @@
-<div class="cart-item">
+<!-- <div class="cart-item">
     <span>{{ cartItem.productName }}</span> x
     <span>{{ cartItem.qty }}</span>:
     <strong>{{ (cartItem.qty * cartItem.price) | currency:'INR' }}</strong>
+  </div> -->
+<hr>
+<br>
+<br>
+<!-- <ul>
+  <li *ngFor="let foodCart of items$ | async">
+    [price: {{foodCart.price}}] {{foodCart.foodName}}
+  </li>
+</ul> -->
+
+
+<!-- <div class="cart_section">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+              <div class="cart_container">
+                  <div class="cart_title">Shopping Cart<small> (1 item in your cart) </small></div>
+                  <div class="cart_items">
+                      <ul class="cart_list">
+                          <li class="cart_item clearfix" *ngFor="let foodCart of items$ | async">
+                              <div class="cart_item_image"><img [src]="foodCart.imageUrl" alt=""></div>
+                              <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                  <div class="cart_item_name cart_info_col">
+                                      <div class="cart_item_title">Name</div>
+                                      <div class="cart_item_text">{{foodCart.foodName}}</div>
+                                  </div>
+                                  <div class="cart_item_color cart_info_col">
+                                      <div class="cart_item_title">Color</div>
+                                      <div class="cart_item_text"><span style="background-color:#999999;"></span>Silver</div>
+                                  </div>
+                                  <div class="cart_item_quantity cart_info_col">
+                                      <div class="cart_item_title">Quantity</div>
+                                      <div class="cart_item_text">1</div>
+                                  </div>
+                                  <div class="cart_item_price cart_info_col">
+                                      <div class="cart_item_title">Price</div>
+                                      <div class="cart_item_text">{{foodCart.price}}тг</div>
+                                  </div>
+                                  <div class="cart_item_total cart_info_col">
+                                      <div class="cart_item_title">Delete</div>
+                                      <div class="cart_item_text"><button class="btn btn-outline-danger"
+                    (click)="deleteFood()">Delete</button></div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="order_total">
+                      <div class="order_total_content text-md-right">
+                          <div class="order_total_title">Order Total:</div>
+                          <div class="order_total_amount">{{total}}</div>
+                      </div>
+                  </div>
+                  <div class="cart_buttons"> <button type="button" class="button cart_button_clear">Continue Shopping</button>  </div>
+              </div>
+          </div>
+      </div>
   </div>
+</div> -->
+<hr>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header"><h2>Ваша корзина</h2>
+        </div>
+        <br>
+        <br>
+        <div class="cart-body">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <td>Id</td>
+                <td>Image</td>
+                <td>FoodName</td>
+                <td>Quantity</td>
+                <td>Price</td>
+                <td>Total Price</td>
+                <td>DeleteFood</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let foodCart of items$ | async; let i=index">
+                <td>{{ i + 1}}</td>
+                <td>   <div class="cart_item_image"><img [src]="foodCart.imageUrl" alt=""></div></td>
+                <td>{{ foodCart.foodName }}</td>
+                <td>1</td>
+                <td><input type="number" class="form-control" value="{{ foodCart.price }}" readonly></td>
+                <td><input type="number" class="form-control" value="{{ foodCart.price }}" readonly #varall></td>
+                <td>    <button class="btn btn-outline-danger" 
+                  (click)="deleteFood()">Delete</button></td>
+              </tr>
+
+            </tbody>            
+          </table>
+          <div style="float: right" class="mr-5">
+            Общая сумма<input type="number" class="form-control" value="{{ total }}" readonly>
+            <button routerLink="/checkout" class="btn btn-outline-primary btn-md mt-5 mb-3">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+
+
+ <!-- <tr *ngIf="items$ == ''">
+                <td colspan="5" class="text-center"><h4>Your cart is empty</h4></td>
+              </tr> -->

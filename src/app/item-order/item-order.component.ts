@@ -21,7 +21,7 @@ export class ItemOrderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addToCart() {
+  // addToCart() {
     // this.itemPayload.foodId = foodId;
     // this.itemPayload.name = this.foodItem.foodName;
     // this.itemPayload.price = this.foodItem.price;
@@ -31,9 +31,13 @@ export class ItemOrderComponent implements OnInit {
     // }, error => {
     //   throwError(error);
     // });
-    this.itemService.addItem(this.foodItem).subscribe(() => {
-      this.msg.sendMsg(this.productItem)
-    })
+    // this.itemService.addItem(this.foodItem).subscribe(() => {
+    //   this.msg.sendMsg(this.productItem)
+    // })
+  // }
+
+  addToCart(foodItem) {
+    this.itemService.addToCart(foodItem);
   }
 
 }
